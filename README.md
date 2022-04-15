@@ -1,9 +1,9 @@
-# Underscores + SASS + Tailwind
+# SASS + TailwindCSS setup for Underscores WP Theme
 
 ## What and why
-[Underscores WP Theme](https://underscores.me/) allows you to download a sassified copy, which uses SCSS. That's pretty cool, but I prefer [SASS](https://sass-lang.com/) instead of SCSS. And I'm used to work with [TailwindCSS](https://tailwindcss.com/). 
+[Underscores WP Theme](https://underscores.me/) allows you to download a sassified copy, which uses SCSS. But, if you prefer [SASS](https://sass-lang.com/) instead of SCSS and you are used to work with [TailwindCSS](https://tailwindcss.com/), you'll need to spend some time changing the syntax of the Underscores files to SASS and integrating TailwindCSS into the project. 
 
-For that reason, I spent some time changing the syntax of the Underscores files to SASS and integrating TailwindCSS into the project.
+That's it.
 
 ## How
 1. Downloaded a sassified copy of [Underscores](https://underscores.me/)
@@ -11,7 +11,7 @@ For that reason, I spent some time changing the syntax of the Underscores files 
 3. Switched to SASS, reformating all SCSS files
 4. Replaced the SASS syntax with the TailwindCSS syntax in all those files
 
-Note that I decided to respect the SASS variables used in Underscores, but replaced all its values using using Tailwind's **theme()** function, so you'll be free to organize it in a way that you can manage theme from Tailwind config file.
+Note that I decided to respect the SASS variables used in Underscores, but replaced all its values using Tailwind's **theme()** function, so you'll be free to organize it in a way that you can manage them from Tailwind config file, using your colors, fonts, etc.
 
 ## Use it
 1. Download your copy of [Underscores WP Theme](https://underscores.me/). Remember **not to sassify** it
