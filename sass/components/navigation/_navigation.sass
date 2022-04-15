@@ -1,0 +1,77 @@
+.main-navigation
+	@apply block w-full
+
+	ul
+		@apply hidden list-none m-0 pl-0
+
+		ul
+			@apply float-left absolute top-full shadow
+			left: -999em
+			z-index: 99999
+
+			ul
+				@apply top-0
+				left: -999em
+
+			li
+
+				&:hover > ul,
+				&.focus > ul
+					@apply block left-auto
+
+			a
+				width: 200px
+
+			:hover > a,
+			.focus > a
+
+			a:hover,
+			a.focus
+
+		li:hover > ul,
+		li.focus > ul
+			@apply left-auto
+
+	li
+		@apply relative
+
+		&:hover > a,
+		&.focus > a
+
+	a
+		@apply block no-underline
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul
+	@apply block
+
+@screen sm
+
+	.menu-toggle
+		@apply hidden
+
+	.main-navigation ul
+		@apply flex
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation
+
+	.site-main &
+		@apply mt-0 mx-0 mb-6
+
+	.nav-links
+		@apply flex
+
+	.nav-previous
+		flex: 1 0 50%
+
+	.nav-next
+		text-align: end
+		flex: 1 0 50%

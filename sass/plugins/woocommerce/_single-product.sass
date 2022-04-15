@@ -1,0 +1,59 @@
+.single-product
+
+	div.product
+		@apply relative
+
+		.woocommerce-product-gallery
+			@apply relative float-left
+
+
+			&__trigger
+				@apply absolute top-8 right-6 block
+				z-index: 99
+
+		.flex-viewport
+			@apply mb-4
+
+			.flex-control-thumbs
+				@apply m-0 p-0
+
+				li
+					@apply list-none cursor-pointer float-left
+
+					img
+						@apply opacity-50
+
+						&.flex-active
+							@apply opacity-1
+
+					&:hover
+
+						img
+							@apply opacity-1
+
+			@for $i from 2 through 5
+
+				&.woocommerce-product-gallery--columns-#{$i}
+
+					.flex-control-thumbs
+
+						li
+
+							@include column-width($i)
+
+							&:nth-child(#{$i}n)
+								@apply mr-0
+
+							&:nth-child(#{$i}n+1)
+								@apply clear-both
+
+.stock
+
+	&:empty::before
+		@apply hidden
+
+	&.in-stock
+		color: $woocommerce__color-success
+
+	&.out-of-stock
+		color: $woocommerce__color-error

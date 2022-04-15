@@ -1,0 +1,39 @@
+p
+	@apply mb-6
+
+dfn,
+cite,
+em,
+i
+	@apply italic
+
+blockquote
+	@apply my-0 mx-6
+
+address
+	@apply mx-0 mt-0 mb-6
+
+pre
+	@apply mb-7 max-w-full overflow-auto p-7
+	background: $color__background-pre
+	font-family: $font__pre
+	line-height: $font__line-height-pre
+
+code,
+kbd,
+tt,
+var
+	font-family: $font__code
+
+abbr,
+acronym
+	@apply cursor-help
+	border-bottom: 1px dotted $color__border-abbr
+
+mark,
+ins
+	background: $color__background-ins
+	@apply no-underline
+
+big
+	font-size: 125%

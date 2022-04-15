@@ -1,0 +1,12 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]
+	@apply border border-gray-500 text-gray-500 leading-none px-4 pt-2.5 pb-2
+	background: $color__background-button
+	&:hover
+		border-color: $color__border-button-hover
+
+	&:active,
+	&:focus
+		border-color: $color__border-button-focus

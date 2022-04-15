@@ -1,0 +1,168 @@
+/** Header cart
+	
+.site-header-cart
+	@apply relative m-0 p-0
+
+	.cart-contents
+		@apply no-underline
+
+	.widget_shopping_cart
+		@apply hidden
+
+	.product_list_widget
+		@apply m-0 p-0
+
+/** Star rating
+
+.star-rating
+	@apply overflow-hidden relative h-7 leading-7 w-20 font-normal
+	font-family: star
+
+	&::before
+		content: "\53\53\53\53\53"
+		@apply float-left top-0 left-0 absolute opacity-25
+
+	span
+		@apply overflow-hidden float-left top-0 left-0 absolute pt-6
+
+	span::before
+		content: "\53\53\53\53\53"
+		@apply top-0 left-0 absolute
+		color: $color__link
+
+p.stars
+
+	a
+		text-indent: -999em
+		@apply relative h-4 w-4 inline-block no-underline mr-px font-normal
+
+		&::before
+			@apply block absolute top-0 left-0 w-4 h-4 leading-none opacity-25 indent-0
+			font-family: star
+			content: "\53"
+
+		&:hover
+
+			~ a::before
+				content: "\53"
+				color: $color__text-main
+				@apply opacity-25
+
+	&:hover
+
+		a
+
+			&::before
+				content: "\53"
+				color: $color__link
+				@apply opacity-100
+
+	&.selected
+
+		a.active
+
+			&::before
+				content: "\53"
+				color: $color__link
+				@apply opacity-100
+
+			~ a::before
+				content: "\53"
+				color: $color__text-main
+				@apply opacity-25
+
+		a:not(.active)
+
+			&::before
+				content: "\53"
+				color: $color__link
+				@apply opacity-100
+
+/** Tabs
+
+.woocommerce-tabs
+
+	ul.tabs
+		@apply list-none m-0 p-0 text-left
+
+		li
+			@apply block m-0 relative
+
+			a
+				@apply py-4 px-0 block
+
+	.panel
+
+		h2:first-of-type
+			@apply mb-4
+
+/** first-letter:Password strength meter
+
+.woocommerce-password-strength
+	@apply text-right
+
+	&.strong
+		color: $woocommerce__color-success
+
+	&.short
+		color: $woocommerce__color-error
+
+	&.bad
+		color: $woocommerce__color-error
+
+	&.good
+		color: $woocommerce__color-info
+
+/** Forms
+.form-row
+
+	&.woocommerce-validated
+
+		input.input-text
+			box-shadow: inset 2px 0 0 $woocommerce__color-success
+
+	&.woocommerce-invalid
+
+		input.input-text
+			box-shadow: inset 2px 0 0 $woocommerce__color-error
+
+.required
+	@apply text-red-600
+
+/** Notices
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-noreviews,
+p.no-comments
+	background-color: $woocommerce__color-success
+	@apply clear-both
+
+.woocommerce-info,
+.woocommerce-noreviews,
+p.no-comments
+	background-color: $woocommerce__color-info
+
+.woocommerce-error
+	background-color: $woocommerce__color-error
+
+.demo_store
+	@apply fixed left-0 bottom-0 right-0 m-0 p-4 
+	background-color: $woocommerce__color-info
+	z-index: 9999
+
+@screen md
+
+	/** Header cart
+
+	.site-header-cart
+
+		.widget_shopping_cart
+			@apply absolute top-full w-full block shadow
+			z-index: 999999
+			left: -999em
+
+		&:hover,
+		&.focus
+			.widget_shopping_cart 
+				@apply left-0 block

@@ -1,0 +1,13 @@
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object
+	@apply max-w-full
+
+img
+	@apply h-auto max-w-full
+	// Make sure images are scaled correctly and adhere to container width.
+
+figure
+	@apply my-4 mx-0
+	// Extra wide images within figure tags don't overflow the content area.

@@ -1,0 +1,14 @@
+.gallery
+	@apply mb-6 grid gap-6
+
+	&-item
+		@apply inline-block text-center w-full
+
+// Loops to enumerate the classes for gallery columns.
+@for $i from 2 through 9
+
+	.gallery-columns-#{$i}
+		grid-template-columns: repeat($i, 1fr)
+
+.gallery-caption
+	@apply block

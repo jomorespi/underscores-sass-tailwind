@@ -1,0 +1,40 @@
+ul.products
+	@apply m-0 p-0
+
+	li.product
+		@apply list-none relative mb-8
+
+		img
+			@apply block
+
+		.button
+			@apply block
+
+@screen md
+
+	ul.products
+
+		li.product
+
+			@include column-width(3)
+			@apply float-left
+			margin-right: $columns__margin
+
+			&.first
+				@apply clear-both
+
+			&.last
+				@apply mr-0
+
+	ul.products.columns-1
+
+		li.product
+			@apply float-none w-full
+
+	@for $i from 2 through 6
+
+		ul.products.columns-#{$i}
+
+			li.product
+
+				@include column-width( $i )

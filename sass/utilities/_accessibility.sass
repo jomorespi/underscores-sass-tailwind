@@ -1,0 +1,22 @@
+/* Text meant only for screen readers. */
+.screen-reader-text
+	@apply border-none h-px -m-px overflow-hidden p-0 w-px
+	clip: rect(1px, 1px, 1px, 1px)
+	clip-path: inset(50%)
+	position: absolute !important
+	word-wrap: normal !important // Many screen reader and browser combinations announce broken words as they would appear visually.
+
+	&:focus
+		@apply shadow-sm block text-sm font-normal h-auto leading-normal no-underline w-auto
+		background-color: $color__background-screen
+		clip: auto !important
+		clip-path: none
+		color: $color__text-screen
+		left: 5px
+		padding: 15px 23px 14px
+		top: 5px
+		z-index: 100000 // Above WP toolbar.
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus
+	@apply outline-none

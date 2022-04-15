@@ -1,0 +1,61 @@
+table.shop_table_responsive
+
+	thead
+		@apply hidden
+
+	tbody
+
+		th
+			@apply hidden
+
+	tr
+
+		td
+			@apply block text-right clear-both
+
+			&::before
+				content: attr(data-title) ": "
+				@apply float-left
+
+			&.product-remove
+
+				a
+					@apply text-left
+
+				&::before
+					@apply hidden
+
+			&.actions,
+			&.download-actions
+
+				&::before
+					@apply hidden
+
+			&.download-actions
+
+				.button
+					@apply block text-center
+
+@screen md
+
+	table.shop_table_responsive
+
+		thead
+			@apply table-header-group
+
+		tbody
+
+			th
+				@apply table-cell
+
+		tr
+
+			th,
+			td
+				@apply text-left
+
+			td
+				@apply table-cell
+
+				&::before
+					@apply hidden

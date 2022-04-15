@@ -1,0 +1,44 @@
+/** WooCommerce Price Filter
+
+.widget_price_filter
+
+	.price_slider
+		@apply mb-6
+
+
+	&_amount
+		@apply text-right leading-10
+
+		.button
+			@apply float-left
+
+	.ui-slider
+		@apply relative text-left
+
+
+		& .ui-slider-handle
+			@apply absolute w-4 h-4 cursor-ew-resize outline-none box-border mt-1 opacity-100 
+			z-index: 2
+			background: $color__link
+
+			&:last-child
+				@apply -ml-4
+
+			&:hover,
+			&.ui-state-active
+				@apply shadow-sm
+
+
+		& .ui-slider-range
+			@apply absolute block border-0
+			z-index: 1
+			background: $color__link
+
+		.price_slider_wrapper .ui-widget-content
+			@apply bg-black bg-opacity-10
+
+	.ui-slider-horizontal
+		@apply h-2
+
+		& .ui-slider-range
+			@apply h-full

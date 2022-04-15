@@ -1,0 +1,15 @@
+@screen md
+
+	.col2-set
+
+		.form-row-first
+			@apply float-left
+			margin-right: $columns__margin
+
+		.form-row-last
+			@apply float-right mr-0
+
+		.form-row-first,
+		.form-row-last
+
+			@include column-width(2)
