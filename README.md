@@ -1,4 +1,4 @@
-#Underscores + SASS + Tailwind
+# Underscores + SASS + Tailwind
 
 ## What and why
 [Underscores WP Theme](https://underscores.me/) allows you to download a sassified copy, which uses SCSS. That's pretty cool, but I prefer [SASS](https://sass-lang.com/) instead of SCSS. And I'm used to work with [TailwindCSS](https://tailwindcss.com/). 
