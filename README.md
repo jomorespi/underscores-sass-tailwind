@@ -11,13 +11,13 @@ For that reason, I spent some time changing the syntax of the Underscores files 
 3. Switched to SASS, reformating all SCSS files
 4. Replaced the SASS syntax with the TailwindCSS syntax in all those files
 
-Note that I decided to respect the SASS variables used in Underscores, but replaced all its values using using Tailwind's 'theme()' function, so you'll be free to organize it in a way that you can manage theme from Tailwind config file.
+Note that I decided to respect the SASS variables used in Underscores, but replaced all its values using using Tailwind's **theme()** function, so you'll be free to organize it in a way that you can manage theme from Tailwind config file.
 
 ## Use it
 1. Download your copy of [Underscores WP Theme](https://underscores.me/). Remember **not to sassify** it
 2. Download the files from this repository and paste them into your theme. You will need to replace your **package.json** file. There's no need to do the same with **Readme.md**
 3. Replace the theme information in **sass/style.sass** header
-4. Run `npm install``
+4. Run `npm install`
 5. Use `npm run dev`, `npm run watch` or `npm run prod` and develop your theme!
 
 ## Refs
